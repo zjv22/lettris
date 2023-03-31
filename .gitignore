@@ -1,0 +1,6 @@
+*.class
+.idea
+open.sh
+run.sh
+*.mp3
+
