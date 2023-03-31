@@ -52,6 +52,8 @@ function init()
 {
     // call API to async load some letters
     reloadLetterCache();
+    
+    letterCache = "LETTRIS" // zzzzasdf debug 
 
     let canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
@@ -106,7 +108,7 @@ function initScale()
     XD = Math.floor(window.innerWidth / (COLUMNS+6));
     YD = Math.floor(XD * 1.15 );
      
-    if( ( YD * (ROWS + 2 ) ) > (window.innerHeight - 150) )
+    if( YD * (ROWS + 3 ) > window.innerHeight)
     {
        YD = Math.floor( (window.innerHeight-75) / (ROWS+3));
        XD = Math.floor(YD / 1.15);
