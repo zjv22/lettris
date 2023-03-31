@@ -53,8 +53,6 @@ function init()
     // call API to async load some letters
     reloadLetterCache();
     
-    letterCache = "LETTRIS" // zzzzasdf debug 
-
     let canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     
