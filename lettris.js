@@ -1,5 +1,5 @@
 
-let ROWS    = 9;
+let ROWS    = 8;
 let COLUMNS = 7;
 
 let BACKGROUND = 'black';
@@ -11,7 +11,7 @@ var xBorder = 16;
 var yBorder = 16;
 var XD = 50;  // tile x dimension
 var YD = 55;  // tile y dimension
-var speed = 500; // ms between each frame, may increase with score?
+var speed = 750; // ms between each frame, may decrease with score?
 
 
 var ctx;        // scene renderer
@@ -81,9 +81,9 @@ function init()
     windowLeftX = (window.innerWidth * 38) / 100;
     windowRightX = (window.innerWidth * 62) / 100;
     // windowBottomY = (window.innerHeight * 78) / 100;
-    window.addEventListener("touchstart", processTouch1, true);
-    // window.addEventListener('touchmove', processTouch2, true);  //'touchmove'
     
+    window.addEventListener("touchstart", processTouch1, true);
+    // window.addEventListener('touchmove', processTouch2, true); //'touchmove'
     // document.getElementById("paused").onclick = function(){pause();}
     
     // add some text on the canvas 

@@ -9,8 +9,8 @@ import java.util.*;
 
 public class WordServer
 {
-   private static final String host = "192.168.0.20"; // local network, must be run as root
-   private static final int port = 8080;
+   // private static final String host = "192.168.0.20"; // local network, must be run as root
+   private static final int port = 8080; // 80
       
    private static final WordTrie words = new WordTrie();
    
@@ -35,8 +35,9 @@ public class WordServer
           (ThreadPoolExecutor)  Executors.newFixedThreadPool(2);
       
       
-      final HttpServer server = HttpServer.create(
-           new InetSocketAddress(host, port), 3);
+      // TODO : may need to increase the thread pool...
+      //         new InetSocketAddress(host, port), 15);
+      final HttpServer server = HttpServer.create(new InetSocketAddress(port), 30);
 
       server.createContext("/", new  MyHttpHandler());
       server.setExecutor(threadPoolExecutor);
@@ -127,7 +128,7 @@ public class WordServer
             final Path path;
             if (req.contains("favicon"))
             {
-                path = Paths.get("./favicon.png");
+                path = Paths.get("./lettrisTile.png");
                 http.getResponseHeaders().set("Content-Type", "image/png");
             }
             else if (req.contains(".mp3"))
