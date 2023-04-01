@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+tar -xzvf ./scowl-2020.12.07.tgz 
+
+
 cat ./scowl-2020.12.07/final/english-words.10 \
     ./scowl-2020.12.07/final/english-words.20 \
     ./scowl-2020.12.07/final/english-words.35 \
