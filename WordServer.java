@@ -131,11 +131,11 @@ public class WordServer
                 path = Paths.get("./lettrisTile.png");
                 http.getResponseHeaders().set("Content-Type", "image/png");
             }
-            else if (req.contains(".mp3"))
-            {
-                path = Paths.get("./homesick.mp3");
-                http.getResponseHeaders().set("Content-Type", "audio/mpeg");
-            }
+            //else if (req.contains(".mp3"))
+            //{
+            //    path = Paths.get("./music.mp3");
+            //    http.getResponseHeaders().set("Content-Type", "audio/mpeg");
+            //}
             else if (req.contains(".js"))
             {
                 path = Paths.get("./lettris.js");
